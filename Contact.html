@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="websiteStyle.css">
+</head>
+
+<body>
+    <div class="banner">
+        <div class="nav">
+            <a href="index.html">
+                <img src="Logo.png" alt="Logo" class="logo">
+            </a>
+            <ul>
+                <li><a href="Projects.html">projects</a></li>
+                <li><a href="Contact.html">contact</a></li>
+                <li><a href="About.html">about</a></li>
+                <li><a href="https://www.instagram.com/ethanjedii/" target="_blank">
+                    <img src="Instalogo.svg" class="instagram-icon">
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">Text copied to clipboard!</div>
+    
+    <div class="section intro">
+            <h1 class="contact-text">What's up?</h1>
+            <p class="bottom-text">Talk to me.</p>
+        <div class="rectangle">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="text-align: left;">
+                    <p>Email: <span id="email">ethanjed.c@gmail.com</span></p>
+                    <p>Contact No: <span id="contactNo">09606325258</span></p>
+                </div>
+                
+                <div style="text-align: right;">
+                    <button class="copy-button" onclick="copyToClipboard('email')">Copy Email</button>
+                    <br><br> 
+                    <button class="copy-button" onclick="copyToClipboard('contactNo')">Copy Contact No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="left-half">
+        <h2>Casual Inquiries</h2>
+        <p>Quick Chat</p>
+        <div class="messenger">
+            <img src="Meslogo.svg" alt="Messenger Icon">
+            <a href="https://m.me/ethanjed.carbonell" target="_blank">Message me on Messenger</a>
+        </div>
+    </div>
+
+    <div class="right-half">
+        <h2>Commission Inquiries</h2>
+        <p>Pricing / Availability / etc.</p>
+        <div class="instagram">
+            <img src="Instalogo.svg" alt="Instagram Icon">
+            <a href="https://www.instagram.com/ethanjedii" target="_blank">Message me on Instagram</a>        </div>
+    </div>
+
+    <footer>
+        <div class="left-section">
+            <img src="Logo.png" alt="Logo" class="logo">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ethanjed.carbonell" target="_blank"><img src="Facelogo.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/ethanjedii/" target="_blank"><img src="Instalogo.svg" alt="Instagram"></a>
+                <a href="https://twitter.com/Ethanjedii" target="_blank"><img src="Twlogo.svg" alt="Twitter"></a>
+                <a href="https://www.pinterest.com/ethanjedc" target="_blank"><img src="Pinlogo.svg" alt="Pinterest"></a>
+            </div>
+        </div>
+
+        <script src="button.js"></script>
+
+        <div class="right-section">
+            <div class="footer-links">
+                <a href="Projects.html">projects</a>
+                <a href="Contact.html">contact</a>
+                <a href="About.html">about</a>
+            </div>
+            
+            <a href="Terms.html" class="footer-links">Website Terms, Privacy, and User Agreement</a>
+        </div>
+    </footer>

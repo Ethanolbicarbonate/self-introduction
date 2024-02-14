@@ -1,0 +1,570 @@
+/**/
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Header/Banner */
+.banner {
+    background: linear-gradient(to right, #9ec773, #298179);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease;
+}
+
+.banner:hover {
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    width: 160px;
+    height: auto;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+/* Navigation */
+.nav {
+    font-size: 14px;
+    width: 95%;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.nav ul li img {
+    vertical-align: middle;
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.nav ul li:hover {
+    transform: scale(1.2);
+}
+
+/* Section styles */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-content {
+    display: flex;
+}
+
+.intro-image {
+    width: 33.33%;
+    z-index: 2;
+    padding: 30px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.intro-text {
+    width: 66.66%;
+    padding: 30px;
+    margin-right: 10%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 2;
+    border-left: 20px solid #9ec773;
+}
+
+.welcome-paragraph,
+.name-paragraph,
+.description-paragraph {
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.welcome-paragraph {
+    font-size: 58px;
+    font-weight: bold;
+    margin-top: 0;
+
+    background: linear-gradient(to right, #bdf97e, #50c598);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.name-paragraph {
+    font-size: 23px;
+    margin-top: 0;
+}
+
+.description-paragraph {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.intro {
+    height: 100vh;
+    position: relative;
+    background-color: #9ec773;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(parallaxbg.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.intro:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #0b332f9d;
+    z-index: 1;
+}
+
+.image-gallery-home {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+    background: linear-gradient(to bottom right, #9ec773, #298179);
+}
+
+.gallery-title {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.gallery-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #9ec773, #298179);
+    z-index: -1;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    transition: width 0.5s ease;
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease;
+}
+
+.image-title,
+.image-description {
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-description {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    background-color: #144f4a9d;
+    padding: 20px;
+    transition: left 0.5s ease;
+}
+
+.gallery-item:hover {
+    width: 30%;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.2);
+}
+
+.gallery-item:hover .image-title,
+.gallery-item:hover .image-description {
+    opacity: 1;
+}
+
+.gallery-item:hover .image-overlay {
+    left: 0;
+}
+
+/*PROJECTSSS*/
+.wrapper {
+    height: 400vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    background: linear-gradient(to bottom right, #9ec773, #298179);
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+section {
+    font-size: 14px;
+    padding: 20px;
+    align-content: center;
+    background: linear-gradient(to right, #9ec773, #298179);
+    color: white;
+}
+
+.background {
+    transform: translateZ(-20px) scale(4);
+
+}
+.midground {
+    transform: translateZ(-10px) scale(2);
+
+}
+.foreground {
+    transform: translateZ(-5px) scale(1.5);
+
+}
+.background,.midground,.foreground{
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    object-fit: cover;
+    z-index: -1;
+}
+.projects-title{
+    font-size: 149px;
+    font-weight: bold;
+    background: linear-gradient(to right, white, #bdf97e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/*PROJECTSSS*/
+
+/*CONTACTTTTTTT*/
+
+.contact-text {
+    font-size: 149px;
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    margin: 0;
+    z-index: 1;
+}
+.bottom-text {
+    font-size: 149px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    z-index: 1;
+}
+.rectangle {
+    background: linear-gradient(to bottom right, #9ec773, #298179);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1;
+}
+
+.second-section {
+    display: flex;
+    height: 50vh;
+}
+
+/* Left Half nga naging top half kay idk ngaa */
+.left-half, .right-half {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+    text-decoration: none;
+}
+
+.left-half {
+    background-color: #0c3b37;
+    color: white;
+}
+
+.left-half h2, .left-half a {
+    margin: 0;
+}
+
+.messenger, .instagram {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+.messenger img {
+    width: 50px; 
+    margin-right: 10px;
+}
+
+/* Right half nga naging bottom half kay di ko kabalo mag insakto */
+.right-half {
+    background-color: #298179;
+    color: white;
+}
+
+
+.instagram img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.messenger a, .instagram a {
+    color: white;
+}
+/*button notif thingssssssssssssssssss*/
+.copy-button {
+    background-color: #0c3b37;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.notification {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    transition: opacity 0.3s;
+    opacity: 0; 
+}
+/*CONTACTTTTTTT*/
+
+/*aboutttttttttttttttttttttttttttt*/
+/* Section Styles */
+.section {
+    position: relative;
+    color: #fff;
+}
+
+/* Section Styles */
+.section {
+    position: relative;
+    color: #fff;
+}
+
+.art-section,.coding-section,.film-section,.music-section {
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.811);;
+    font-size: 23px;
+}
+
+/* Section 1 - General Description */
+.general-section {
+    color: #0c3b37;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background: url('parallaxbg.png') center/cover fixed;
+}
+
+.general-section img {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.general-section .text-content {
+    width: 50%;
+    text-align: left;
+}
+/* Sections 3-5 - Music, Film, Art */
+.music-section {
+    text-align: center;
+    padding: 40px;
+    background: url('music.jpg') center/cover fixed;
+    height: 100vh;
+}
+
+.art-section {
+    text-align: center;
+    padding: 40px;
+    background: url('art.jpg') center/cover fixed;
+    height: 100vh;
+}
+
+.film-section {
+    text-align: center;
+    padding: 40px;
+    background: url('film.jpg') center/cover fixed;
+    height: 100vh;
+}
+
+/* Section 6 - Coding */
+.coding-section {
+    text-align: center;
+    padding: 40px;
+    background: url('code.jpg') center/cover fixed;
+    height: 100vh;
+}
+
+.image-gallery-about {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+
+/*aboutttttttttttttttttttttttttttt*/
+
+
+/*FOOOTTEERRRRRRRR*/
+footer {
+    background-color: #0c3b37;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-section {
+    width: 30%;
+    text-align: left;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 15px;
+}
+
+.social-icons a img {
+    width: 20px;
+    margin: 0 10px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.right-section {
+    width: 65%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+    width: 100%;
+    color: white;
+
+}
+
+.footer-links a {
+    color: white;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.footer-links a:hover {
+    transform: scale(1.2);
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+.copy-button:hover {
+    background-color: #45a049;
+    transition: background-color 0.3s;
+}
+/*FOOOTTEERRRRRRRR*/
+
